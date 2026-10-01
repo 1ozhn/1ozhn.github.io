@@ -1,0 +1,210 @@
+/* BasTech — uygulama gizlilik sayfaları */
+
+:root {
+  --paper: #f6f7f9;
+  --surface: #ffffff;
+  --ink: #1d1b22;
+  --muted: #5e5a66;
+  --rule: #d9d7de;
+  --focus: #1565d8;
+
+  /* Uygulama renkleri; her sayfa body sınıfıyla kendi tonunu seçer */
+  --brand-a: #3a3740;
+  --brand-b: #1d1b22;
+  --brand-on: #ffffff;
+  --brand-mark: rgba(255, 255, 255, 0.10);
+  --link: #3a3740;
+
+  --serif: "Alegreya", Georgia, "Times New Roman", serif;
+  --sans: "Alegreya Sans", "Segoe UI", Roboto, system-ui, sans-serif;
+
+  --measure: 40rem;
+  --gutter: clamp(1rem, 4vw, 2rem);
+}
+
+body.kpss {
+  --brand-a: #6e100e;
+  --brand-b: #420605;
+  --brand-on: #fff4e6;
+  --brand-mark: rgba(240, 196, 106, 0.16);
+  --link: #8a1a17;
+  --focus: #a0701a;
+}
+
+body.readdash {
+  --brand-a: #1565d8;
+  --brand-b: #0e8fb3;
+  --brand-on: #ffffff;
+  --brand-mark: rgba(255, 255, 255, 0.14);
+  --link: #0f5cc4;
+  --focus: #1565d8;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #141318;
+    --surface: #1c1b21;
+    --ink: #ecebf0;
+    --muted: #a9a5b3;
+    --rule: #2f2d36;
+    --link: #d8d5e0;
+  }
+  :root:not([data-theme="light"]) body.kpss { --link: #f0c46a; --focus: #f0c46a; }
+  :root:not([data-theme="light"]) body.readdash { --link: #7cc4ff; --focus: #7cc4ff; }
+}
+
+:root[data-theme="dark"] {
+  --paper: #141318;
+  --surface: #1c1b21;
+  --ink: #ecebf0;
+  --muted: #a9a5b3;
+  --rule: #2f2d36;
+  --link: #d8d5e0;
+}
+:root[data-theme="dark"] body.kpss { --link: #f0c46a; --focus: #f0c46a; }
+:root[data-theme="dark"] body.readdash { --link: #7cc4ff; --focus: #7cc4ff; }
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 1.125rem;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+}
+
+a { color: var(--link); text-underline-offset: 0.18em; text-decoration-thickness: 1px; }
+a:hover { text-decoration-thickness: 2px; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; border-radius: 2px; }
+
+.wrap {
+  max-width: calc(var(--measure) + 2 * var(--gutter));
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+/* Üst bant: uygulamanın kendi rengi ve deseni */
+.band {
+  position: relative;
+  overflow: hidden;
+  color: var(--brand-on);
+  background: linear-gradient(160deg, var(--brand-a), var(--brand-b));
+}
+.band .pattern {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  color: var(--brand-mark);
+  pointer-events: none;
+}
+.band .wrap {
+  position: relative;
+  padding-top: clamp(2rem, 7vw, 3.5rem);
+  padding-bottom: clamp(2rem, 7vw, 3.5rem);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem 1.25rem;
+  align-items: center;
+}
+.band img {
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 1.25rem;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.18);
+}
+body.kpss .band img { border-radius: 50%; }
+.band .app { margin: 0; font-family: var(--serif); font-weight: 700; font-size: clamp(1.75rem, 6vw, 2.5rem); line-height: 1.1; }
+.band .doc { margin: 0.2rem 0 0; font-size: 1.05rem; opacity: 0.88; }
+.back {
+  grid-column: 1 / -1;
+  justify-self: start;
+  color: inherit;
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+/* Sayfanın tek iddialı öğesi: verinin cihazdan çıkmadığı sözü */
+.promise {
+  margin: clamp(2.25rem, 7vw, 3.5rem) 0 0;
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(1.6rem, 5.2vw, 2.35rem);
+  line-height: 1.22;
+  letter-spacing: -0.005em;
+  text-wrap: balance;
+}
+.promise + p { color: var(--muted); margin-top: 1rem; }
+
+.facts {
+  margin: 2rem 0 0;
+  padding: 0;
+  border-top: 1px solid var(--rule);
+}
+.facts div {
+  display: grid;
+  grid-template-columns: minmax(9rem, 13rem) 1fr;
+  gap: 0.25rem 1.5rem;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+.facts dt { color: var(--muted); }
+.facts dd { margin: 0; font-weight: 500; }
+
+h2 {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  margin: 3rem 0 0.75rem;
+}
+p, ul, table { margin: 0 0 1rem; }
+ul { padding-left: 1.25rem; }
+li { margin-bottom: 0.45rem; }
+li::marker { color: var(--link); }
+
+.perms { width: 100%; border-collapse: collapse; font-size: 1rem; }
+.perms th, .perms td { text-align: left; vertical-align: top; padding: 0.7rem 0.75rem 0.7rem 0; border-bottom: 1px solid var(--rule); }
+.perms th { font-weight: 500; color: var(--muted); }
+.perms td:first-child { font-weight: 500; width: 40%; }
+.perms code { font-family: inherit; font-size: 0.85em; color: var(--muted); display: block; word-break: break-all; }
+
+footer {
+  margin-top: 4rem;
+  padding: 2rem 0 3rem;
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+  font-size: 1rem;
+}
+footer p { margin: 0.25rem 0; }
+
+/* Ana sayfa */
+.home-head { padding-top: clamp(2.5rem, 9vw, 5rem); }
+.home-head h1 { font-family: var(--serif); font-weight: 700; font-size: clamp(2.25rem, 8vw, 3.25rem); line-height: 1.05; margin: 0; }
+.home-head p { color: var(--muted); margin-top: 0.75rem; max-width: 32rem; }
+.apps { list-style: none; padding: 0; margin: 2.5rem 0 0; border-top: 1px solid var(--rule); }
+.apps li { display: grid; grid-template-columns: auto 1fr; gap: 0.25rem 1rem; align-items: center; padding: 1.1rem 0; border-bottom: 1px solid var(--rule); margin: 0; }
+.apps img { width: 3.5rem; height: 3.5rem; border-radius: 0.9rem; grid-row: span 2; }
+.apps img.round { border-radius: 50%; }
+.apps strong { font-family: var(--serif); font-size: 1.3rem; font-weight: 700; }
+.apps span { color: var(--muted); font-size: 1rem; }
+.apps a { font-size: 1rem; }
+
+@media (max-width: 34rem) {
+  body { font-size: 1.0625rem; }
+  .facts div { grid-template-columns: 1fr; }
+  .perms td:first-child { width: auto; }
+  .perms thead { display: none; }
+  .perms tr { display: block; border-bottom: 1px solid var(--rule); padding: 0.6rem 0; }
+  .perms td { display: block; border: 0; padding: 0.15rem 0; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .promise { animation: settle 700ms cubic-bezier(.2, .7, .2, 1) both; }
+  @keyframes settle { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+}
