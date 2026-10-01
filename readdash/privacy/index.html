@@ -1,160 +1,154 @@
 <!doctype html>
 <html lang="tr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ReadDash Gizlilik Politikası</title>
-<meta name="description" content="ReadDash hızlı okuma uygulamasının gizlilik politikası / Privacy policy of the ReadDash speed reading app.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --paper: #F6F3EC;
-    --surface: #FFFFFF;
-    --ink: #14213D;
-    --ink-2: #4B566E;
-    --line: #E3DDD0;
-    --accent: #D9541E;
-    --link: #1B64DA;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --paper: #11192D;
-      --surface: #182238;
-      --ink: #EDEAE2;
-      --ink-2: #AEB5C6;
-      --line: #2A3550;
-      --accent: #F2905C;
-      --link: #7FAAF5;
-    }
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: var(--paper);
-    color: var(--ink);
-    font: 16px/1.65 "Lexend", system-ui, sans-serif;
-  }
-  main { max-width: 720px; margin: 0 auto; padding: 48px 20px 80px; }
-  header { margin-bottom: 32px; }
-  .app { font-size: 14px; font-weight: 600; color: var(--accent); letter-spacing: .02em; }
-  h1 { font-size: 32px; line-height: 1.2; margin: 6px 0 8px; letter-spacing: -.02em; }
-  .meta { color: var(--ink-2); font-size: 14px; margin: 0; }
-  nav { display: flex; gap: 8px; margin-top: 20px; }
-  nav a {
-    padding: 6px 14px; border: 1px solid var(--line); border-radius: 999px;
-    color: var(--ink); text-decoration: none; font-size: 14px; background: var(--surface);
-  }
-  .summary {
-    background: var(--surface); border: 1px solid var(--line); border-left: 3px solid var(--accent);
-    border-radius: 12px; padding: 16px 20px; margin: 0 0 28px;
-  }
-  .summary p { margin: 0; }
-  h2 { font-size: 20px; margin: 36px 0 8px; letter-spacing: -.01em; }
-  h3 { font-size: 16px; margin: 20px 0 4px; }
-  p, li { color: var(--ink); }
-  ul { padding-left: 20px; }
-  li { margin: 4px 0; }
-  a { color: var(--link); }
-  section + section { margin-top: 64px; padding-top: 40px; border-top: 1px solid var(--line); }
-  code { font-size: 14px; background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 1px 6px; }
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ReadDash Gizlilik Politikası</title>
+  <meta name="description" content="ReadDash hızlı okuma uygulamasının gizlilik politikası / Privacy policy of the ReadDash speed reading app.">
+  <meta name="theme-color" content="#1565d8">
+  <link rel="icon" href="../../assets/readdash.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya:wght@500;700&family=Alegreya+Sans:wght@400;500&display=swap">
+  <link rel="stylesheet" href="../../assets/site.css">
 </head>
-<body>
-<main>
-  <header>
-    <div class="app">ReadDash · BasTech</div>
-    <h1>Gizlilik Politikası</h1>
-    <p class="meta">Yürürlük tarihi: 1 Ekim 2026</p>
-    <nav><a href="#tr">Türkçe</a><a href="#en" lang="en">English</a></nav>
-  </header>
+<body class="readdash">
 
-  <section id="tr">
-    <div class="summary">
-      <p><strong>Kısaca:</strong> ReadDash tamamen çevrimdışı çalışır. Uygulamanın internet erişim izni yoktur; hiçbir kişisel veriyi toplamaz, sunucuya göndermez, satmaz veya üçüncü taraflarla paylaşmaz. Hesap, reklam ve analitik yoktur.</p>
+<header class="band">
+  <svg class="pattern" aria-hidden="true" focusable="false">
+    <defs>
+      <pattern id="hiz" width="160" height="48" patternUnits="userSpaceOnUse" patternTransform="rotate(-18)">
+        <g stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="8" y1="10" x2="74" y2="10"/>
+          <line x1="96" y1="10" x2="124" y2="10"/>
+          <line x1="40" y1="34" x2="140" y2="34"/>
+        </g>
+      </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#hiz)"/>
+  </svg>
+  <div class="wrap">
+    <a class="back" href="../../">BasTech uygulamaları</a>
+    <img src="../../assets/readdash.png" alt="" width="72" height="72">
+    <div>
+      <h1 class="app">ReadDash</h1>
+      <p class="doc">Gizlilik Politikası, yürürlük tarihi 1&nbsp;Ekim&nbsp;2026</p>
     </div>
+    <nav class="langs" aria-label="Dil">
+      <a href="#tr" hreflang="tr">Türkçe</a>
+      <a href="#en" hreflang="en" lang="en">English</a>
+    </nav>
+  </div>
+</header>
 
-    <p>Bu politika, BasTech tarafından geliştirilen ReadDash hızlı okuma uygulamasının (“uygulama”) bilgilerinizi nasıl ele aldığını açıklar.</p>
+<main class="wrap">
 
-    <h2>Cihazınızda saklanan bilgiler</h2>
-    <p>Uygulamanın çalışması için aşağıdaki bilgiler <strong>yalnızca cihazınızda</strong>, uygulamaya özel depolama alanında saklanır. Bu bilgiler bize ya da başka birine iletilmez:</p>
+  <section id="tr" class="lang-section">
+    <p class="promise">ReadDash internete bağlanmaz. Okuduğun metinler ve ilerlemen yalnızca telefonunda kalır.</p>
+    <p>Bu sayfa, BasTech tarafından geliştirilen ReadDash hızlı okuma uygulamasının hangi bilgileri nerede tuttuğunu ve hangi izinleri neden istediğini açıklar.</p>
+
+    <dl class="facts">
+      <div><dt>Toplanan kişisel veri</dt><dd>Yok</dd></div>
+      <div><dt>İnternet bağlantısı</dt><dd>Kullanılmaz, uygulama internet izni istemez</dd></div>
+      <div><dt>Hesap ve giriş</dt><dd>Gerekmez</dd></div>
+      <div><dt>Reklam, analiz, takip</dt><dd>Yok</dd></div>
+      <div><dt>Satış ya da üçüncü taraflarla paylaşım</dt><dd>Yok</dd></div>
+    </dl>
+
+    <h2>Telefonunda saklanan bilgiler</h2>
+    <p>Uygulamanın çalışabilmesi için aşağıdaki bilgiler yalnızca cihazında, uygulamaya ayrılmış alanda tutulur. Bu bilgiler başka bir yere gönderilmez ve BasTech dahil kimse tarafından görülemez.</p>
     <ul>
-      <li>İsteğe bağlı olarak girdiğiniz adınız</li>
-      <li>Okuma hızı, günlük hedef, okuma görünümü gibi ayarlarınız</li>
-      <li>Okuma istatistikleriniz, egzersiz geçmişiniz, seriniz ve rozetleriniz</li>
-      <li>Metinlerde kaldığınız yer</li>
-      <li>Kendi eklediğiniz metinler (yazdığınız, yapıştırdığınız veya seçtiğiniz bir dosyadan aktardığınız içerik)</li>
+      <li>İstersen girdiğin adın</li>
+      <li>Okuma hızı, günlük hedef, okuma görünümü gibi ayarların</li>
+      <li>Okuma istatistiklerin, egzersiz geçmişin, serin ve rozetlerin</li>
+      <li>Metinlerde kaldığın yer</li>
+      <li>Kendi eklediğin metinler: yazdığın, yapıştırdığın ya da seçtiğin bir dosyadan aktardığın içerik</li>
     </ul>
-    <p>Bu bilgileri istediğiniz zaman uygulamayı kaldırarak ya da Android ayarlarından uygulama verilerini temizleyerek silebilirsiniz.</p>
 
     <h2>Dosyalar</h2>
-    <p>Kütüphaneye dosya eklediğinizde uygulama yalnızca sizin seçtiğiniz dosyayı okur ve metnini cihazınızda saklar. Dosyalarınıza başka bir şekilde erişilmez. Depolama izni yalnızca Android 12 ve öncesinde, bu amaçla istenir.</p>
-
-    <h2>Bildirimler ve izinler</h2>
-    <ul>
-      <li><strong>Bildirimler:</strong> Günlük okuma hatırlatıcısını açarsanız bildirim izni istenir. Hatırlatıcı cihazınızda planlanır; herhangi bir sunucu kullanılmaz. İstediğiniz zaman ayarlardan kapatabilirsiniz.</li>
-      <li><strong>Açılışta başlatma:</strong> Cihaz yeniden başladığında hatırlatıcının yeniden planlanması için kullanılır.</li>
-      <li><strong>Titreşim:</strong> İsteğe bağlı dokunsal geri bildirim için kullanılır.</li>
-      <li>Android'in hatırlatıcı ve ana ekran widget'ı için kullandığı sistem kütüphaneleri; arka plan çalışması, uyanık tutma ve ağ durumu gibi teknik izinler ekler. Uygulamanın internet izni olmadığından bu izinler hiçbir veri gönderimi için kullanılamaz.</li>
-    </ul>
+    <p>Kütüphaneye dosya eklediğinde uygulama yalnızca senin seçtiğin dosyayı okur ve metnini cihazında saklar. Dosyalarına başka hiçbir şekilde erişilmez; dosya ya da içeriği hiçbir yere yüklenmez.</p>
 
     <h2>Ana ekran widget'ı</h2>
-    <p>Widget, serinizi ve okuma sürenizi cihazınızdaki verilerden gösterir.</p>
+    <p>Widget, serini ve okuma süreni telefonundaki verilerden gösterir.</p>
+
+    <h2>İzinler</h2>
+    <table class="perms">
+      <thead><tr><th scope="col">İzin</th><th scope="col">Neden gerekli</th></tr></thead>
+      <tbody>
+        <tr><td>Dosyalara erişim<code>READ_EXTERNAL_STORAGE, WRITE_EXTERNAL_STORAGE</code></td><td>Yalnızca Android 12 ve öncesinde, kütüphaneye eklemek için seçtiğin dosyayı açabilmek için. Android 13 ve sonrasında istenmez.</td></tr>
+        <tr><td>Bildirim gösterme<code>POST_NOTIFICATIONS</code></td><td>Günlük okuma hatırlatıcısını açarsan istenir. Hatırlatıcı telefonunda planlanır, sunucu kullanılmaz. Ayarlardan istediğin zaman kapatabilirsin.</td></tr>
+        <tr><td>Açılışta çalışma<code>RECEIVE_BOOT_COMPLETED</code></td><td>Telefon yeniden başladığında hatırlatıcıyı yeniden planlamak için.</td></tr>
+        <tr><td>Titreşim<code>VIBRATE</code></td><td>İsteğe bağlı dokunsal geri bildirim için.</td></tr>
+        <tr><td>Arka plan görevleri<code>WAKE_LOCK, FOREGROUND_SERVICE, ACCESS_NETWORK_STATE</code></td><td>Android'in hatırlatıcı ve widget için kullandığı sistem kütüphaneleri bu teknik izinleri ekler. Uygulamanın internet izni olmadığından bu izinler hiçbir veri göndermek için kullanılamaz.</td></tr>
+      </tbody>
+    </table>
 
     <h2>Yedekleme</h2>
-    <p>Cihazınızda Android'in otomatik yedekleme özelliği açıksa, uygulama verileri Android tarafından kendi Google hesabınıza yedeklenebilir. Bu yedekleme Google tarafından sizin ayarlarınıza göre yapılır; bize iletilmez ve bizim erişimimizde değildir.</p>
+    <p>Telefonunda Android'in otomatik yedekleme özelliği açıksa, uygulama verileri Android tarafından kendi Google hesabına yedeklenebilir. Bu yedeklemeyi senin ayarlarına göre Google yapar; bize iletilmez ve bizim erişimimizde değildir.</p>
+
+    <h2>Verilerini silmek</h2>
+    <p>Tüm bilgiler yalnızca cihazında olduğundan silme kontrolü sende. Android ayarlarında ReadDash için “Depolama alanını temizle” dediğinde ya da uygulamayı kaldırdığında bu bilgilerin tamamı silinir. Kütüphaneye eklediğin dosyaların asılları telefonundaki yerlerinde kalır.</p>
 
     <h2>Google Play</h2>
-    <p>Uygulamayı Google Play üzerinden indirdiğinizde Google, kendi gizlilik politikasına göre bazı verileri (örneğin indirme bilgisi veya izin verdiyseniz çökme raporları) işleyebilir. Ayrıntılar için <a href="https://policies.google.com/privacy?hl=tr">Google Gizlilik Politikası</a>'na bakabilirsiniz.</p>
+    <p>Uygulamayı Google Play üzerinden indirdiğinde Google, kendi gizlilik politikasına göre bazı verileri (örneğin indirme bilgisi ya da izin verdiysen çökme raporları) işleyebilir. Ayrıntılar için <a href="https://policies.google.com/privacy?hl=tr">Google Gizlilik Politikası</a>'na bakabilirsin.</p>
 
     <h2>Çocukların gizliliği</h2>
-    <p>Uygulama hiçbir kullanıcıdan, çocuklar dahil, kişisel veri toplamaz.</p>
+    <p>Uygulama, çocuklar dahil hiçbir kullanıcıdan kişisel veri toplamaz.</p>
 
-    <h2>Değişiklikler</h2>
-    <p>Bu politika güncellenirse yeni sürüm bu sayfada, yürürlük tarihiyle birlikte yayınlanır.</p>
+    <h2>Bu politikadaki değişiklikler</h2>
+    <p>Uygulamanın veri kullanımı değişirse, örneğin internet bağlantısı gerektiren bir özellik eklenirse, bu sayfa güncellenir ve yürürlük tarihi değiştirilir.</p>
 
     <h2>İletişim</h2>
-    <p>Sorularınız için: <a href="mailto:bastech.destek@gmail.com">bastech.destek@gmail.com</a></p>
+    <p>Gizlilikle ilgili soruların için <a href="mailto:bastech.destek@gmail.com">bastech.destek@gmail.com</a> adresine yazabilirsin.</p>
   </section>
 
-  <section id="en" lang="en">
-    <h1>Privacy Policy</h1>
-    <p class="meta">Effective date: October 1, 2026</p>
+  <section id="en" class="lang-section" lang="en">
+    <h2>Privacy Policy</h2>
+    <p class="lang-date">Effective date: October&nbsp;1,&nbsp;2026</p>
+    <p class="promise">ReadDash never connects to the internet. The texts you read and your progress stay on your phone.</p>
+    <p>This page explains what the ReadDash speed reading app, developed by BasTech, stores, where it stores it, and why it asks for each permission.</p>
 
-    <div class="summary">
-      <p><strong>In short:</strong> ReadDash works completely offline. The app has no internet permission; it does not collect, transmit, sell or share any personal data. There are no accounts, ads or analytics.</p>
-    </div>
+    <dl class="facts">
+      <div><dt>Personal data collected</dt><dd>None</dd></div>
+      <div><dt>Internet connection</dt><dd>Not used, the app has no internet permission</dd></div>
+      <div><dt>Account or sign-in</dt><dd>Not required</dd></div>
+      <div><dt>Ads, analytics, tracking</dt><dd>None</dd></div>
+      <div><dt>Selling or sharing with third parties</dt><dd>None</dd></div>
+    </dl>
 
-    <p>This policy explains how the ReadDash speed reading app (“the app”), developed by BasTech, handles your information.</p>
-
-    <h2>Information stored on your device</h2>
-    <p>To work, the app stores the following <strong>only on your device</strong>, in its private storage. None of it is sent to us or anyone else:</p>
+    <h2>Information stored on your phone</h2>
+    <p>To work, the app keeps the following only on your device, in its private storage. None of it is sent anywhere, and no one, including BasTech, can see it.</p>
     <ul>
       <li>Your name, if you choose to enter it</li>
       <li>Your settings, such as reading speed, daily goal and reading appearance</li>
       <li>Your reading statistics, exercise history, streak and badges</li>
       <li>Your reading position in texts</li>
-      <li>Texts you add yourself (typed, pasted or imported from a file you select)</li>
+      <li>Texts you add yourself: typed, pasted or imported from a file you select</li>
     </ul>
-    <p>You can delete this information at any time by uninstalling the app or clearing its data in Android settings.</p>
 
     <h2>Files</h2>
-    <p>When you add a file to the library, the app reads only the file you select and stores its text on your device. Your files are not accessed in any other way. Storage permission is requested only on Android 12 and earlier, for this purpose.</p>
-
-    <h2>Notifications and permissions</h2>
-    <ul>
-      <li><strong>Notifications:</strong> requested if you turn on the daily reading reminder. The reminder is scheduled on your device; no server is involved. You can turn it off in settings at any time.</li>
-      <li><strong>Run at startup:</strong> used to reschedule the reminder after the device restarts.</li>
-      <li><strong>Vibration:</strong> used for optional haptic feedback.</li>
-      <li>The Android system libraries used for the reminder and the home screen widget add technical permissions such as background work, keeping the device awake and network state. Because the app has no internet permission, these cannot be used to send any data.</li>
-    </ul>
+    <p>When you add a file to the library, the app reads only the file you select and stores its text on your device. Your files are not accessed in any other way, and neither the file nor its contents are uploaded anywhere.</p>
 
     <h2>Home screen widget</h2>
-    <p>The widget shows your streak and reading time from the data on your device.</p>
+    <p>The widget shows your streak and reading time from the data on your phone.</p>
+
+    <h2>Permissions</h2>
+    <table class="perms">
+      <thead><tr><th scope="col">Permission</th><th scope="col">Why it is needed</th></tr></thead>
+      <tbody>
+        <tr><td>File access<code>READ_EXTERNAL_STORAGE, WRITE_EXTERNAL_STORAGE</code></td><td>Only on Android 12 and earlier, to open the file you choose to add to the library. Not requested on Android 13 and later.</td></tr>
+        <tr><td>Notifications<code>POST_NOTIFICATIONS</code></td><td>Requested if you turn on the daily reading reminder. The reminder is scheduled on your phone; no server is involved. You can turn it off in settings at any time.</td></tr>
+        <tr><td>Run at startup<code>RECEIVE_BOOT_COMPLETED</code></td><td>To reschedule the reminder after your phone restarts.</td></tr>
+        <tr><td>Vibration<code>VIBRATE</code></td><td>For optional haptic feedback.</td></tr>
+        <tr><td>Background work<code>WAKE_LOCK, FOREGROUND_SERVICE, ACCESS_NETWORK_STATE</code></td><td>Added by the Android system libraries used for the reminder and the widget. Because the app has no internet permission, these cannot be used to send any data.</td></tr>
+      </tbody>
+    </table>
 
     <h2>Backup</h2>
-    <p>If Android's automatic backup is enabled on your device, Android may back up the app's data to your own Google account. This backup is performed by Google according to your settings; it is not sent to us and we have no access to it.</p>
+    <p>If Android's automatic backup is turned on, Android may back up the app's data to your own Google account. Google performs this backup according to your settings; it is not sent to us and we have no access to it.</p>
+
+    <h2>Deleting your data</h2>
+    <p>Because everything stays on your device, you are in control. Clearing ReadDash's storage in Android settings or uninstalling the app deletes all of this information. The original files you added to the library stay where they are on your phone.</p>
 
     <h2>Google Play</h2>
     <p>When you download the app from Google Play, Google may process some data (such as download information or, if you allowed it, crash reports) under its own privacy policy. See the <a href="https://policies.google.com/privacy?hl=en">Google Privacy Policy</a> for details.</p>
@@ -162,12 +156,21 @@
     <h2>Children's privacy</h2>
     <p>The app does not collect personal data from any user, including children.</p>
 
-    <h2>Changes</h2>
-    <p>If this policy is updated, the new version will be published on this page with its effective date.</p>
+    <h2>Changes to this policy</h2>
+    <p>If the app's use of data changes, for example if a feature that needs an internet connection is added, this page will be updated along with its effective date.</p>
 
     <h2>Contact</h2>
-    <p>For questions: <a href="mailto:bastech.destek@gmail.com">bastech.destek@gmail.com</a></p>
+    <p>For privacy questions, write to <a href="mailto:bastech.destek@gmail.com">bastech.destek@gmail.com</a>.</p>
   </section>
+
 </main>
+
+<footer>
+  <div class="wrap">
+    <p>ReadDash, BasTech tarafından geliştirilmiştir.</p>
+    <p>Paket adı: com.bastech.readdash</p>
+  </div>
+</footer>
+
 </body>
 </html>
