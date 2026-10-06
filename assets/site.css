@@ -40,6 +40,15 @@ body.readdash {
   --focus: #1565d8;
 }
 
+body.lexiup {
+  --brand-a: #4f36c9;
+  --brand-b: #2a1d7a;
+  --brand-on: #ffffff;
+  --brand-mark: rgba(255, 255, 255, 0.12);
+  --link: #4a32bd;
+  --focus: #4f36c9;
+}
+
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --paper: #141318;
@@ -51,6 +60,7 @@ body.readdash {
   }
   :root:not([data-theme="light"]) body.kpss { --link: #f0c46a; --focus: #f0c46a; }
   :root:not([data-theme="light"]) body.readdash { --link: #7cc4ff; --focus: #7cc4ff; }
+  :root:not([data-theme="light"]) body.lexiup { --link: #b7a8ff; --focus: #b7a8ff; }
 }
 
 :root[data-theme="dark"] {
@@ -63,6 +73,7 @@ body.readdash {
 }
 :root[data-theme="dark"] body.kpss { --link: #f0c46a; --focus: #f0c46a; }
 :root[data-theme="dark"] body.readdash { --link: #7cc4ff; --focus: #7cc4ff; }
+:root[data-theme="dark"] body.lexiup { --link: #b7a8ff; --focus: #b7a8ff; }
 
 *, *::before, *::after { box-sizing: border-box; }
 
@@ -119,6 +130,8 @@ a:hover { text-decoration-thickness: 2px; }
   box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.18);
 }
 body.kpss .band img { border-radius: 50%; }
+/* Simgesi olmayan sayfada başlık tüm satırı kaplar */
+.band .title { grid-column: 1 / -1; }
 .band .app { margin: 0; font-family: var(--serif); font-weight: 700; font-size: clamp(1.75rem, 6vw, 2.5rem); line-height: 1.1; }
 .band .doc { margin: 0.2rem 0 0; font-size: 1.05rem; opacity: 0.88; }
 .back {
@@ -205,6 +218,7 @@ footer p { margin: 0.25rem 0; }
 .apps li { display: grid; grid-template-columns: auto 1fr; gap: 0.25rem 1rem; align-items: center; padding: 1.1rem 0; border-bottom: 1px solid var(--rule); margin: 0; }
 .apps img { width: 3.5rem; height: 3.5rem; border-radius: 0.9rem; grid-row: span 2; }
 .apps img.round { border-radius: 50%; }
+.apps .mono { width: 3.5rem; height: 3.5rem; border-radius: 0.9rem; grid-row: span 2; display: grid; place-items: center; background: linear-gradient(160deg, #4f36c9, #2a1d7a); color: #fff; font-family: var(--serif); font-weight: 700; font-size: 1.6rem; }
 .apps strong { font-family: var(--serif); font-size: 1.3rem; font-weight: 700; }
 .apps span { color: var(--muted); font-size: 1rem; }
 .apps a { font-size: 1rem; }
